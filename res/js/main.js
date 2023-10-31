@@ -31,7 +31,7 @@ autoClickerUpgrade.onclick = () => {
   if (numberOfCookies >= autoClickerUpgradePrice) {
     //odecteme cenu nakupu
     numberOfCookies -= autoClickerUpgradePrice;
-    autoClickerUpgradePrice += 200;
+    autoClickerUpgradePrice += 150;
     autoClickerUpgrade.innerText = `Buy Free Delivery of SNUS: ${autoClickerUpgradePrice} kč`
     counter.innerText = "SNUS: " + numberOfCookies;
     autoclickerCookieIncreaseNumber += 2;
