@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  font-family: 'VT323', monospace;
+  user-select: none;
+}
+
+body {
+  background-image: url("../img/Background.png");
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  background-repeat: no-repeat;
+}
+
+#wrapper {
+  display: table;
+  margin: 0 auto;
+  margin-top: 19cqb;
+}
+
+#cookie {
+  max-width: 300px;
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+#cookie:hover {
+  transform: scale(1.6);
+}
+
+#counter {
+  font-size: 72px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transition: .2s ease;
+  cursor: pointer;
+  background-color: bisque;
+  border-radius: 20px;
+}
+
+#counter:hover {
+  transform: scale(1.0);
+}
+
+.cookie-button {
+    padding: 10px 14px;
+    margin: auto;
+    background-color: bisque;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 32px;
+    cursor: pointer;
+    max-width: 100%;
+    display: block;
+    margin-top: 10px;
+    box-sizing: content-box;
+}
+.cookie-button:hover{
+    transform: scale(1.1);
+}
