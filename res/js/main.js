@@ -8,6 +8,7 @@ let cookieIncreaseNumber = 1;
 let autoclickerCookieIncreaseNumber = 0;
 let autoclickerInterval;
 let clickUpgradePrice = 50;
+let autoClickerUpgradePrice = 100;
 
 cookie.onclick = () => {
   numberOfCookies += cookieIncreaseNumber;
@@ -18,27 +19,28 @@ clickUpgrade.onclick = () => {
   if (numberOfCookies >= clickUpgradePrice) {
     //odecist cenu nakupu
     numberOfCookies -= clickUpgradePrice;
-    clickUpgradePrice *= 2;
-    clickUpgrade.innerHTML = "Buy click upgrade: {clickUpgradePrice}"; 
-    counter.innerText = "SNUS: " + numberOfCookies;
+    clickUpgradePrice += 100;
+    clickUpgrade.innerText = `Buy SNUS click upgrade: ${clickUpgradePrice} kč` ; 
     //zvednout klikani o 1
-    cookieIncreaseNumber++;
+    cookieIncreaseNumber ++;
+    counter.innerHTML = "SNUS: " + numberOfCookies;
   }
 };
 
 autoClickerUpgrade.onclick = () => {
-  if (numberOfCookies >= 100) {
+  if (numberOfCookies >= autoClickerUpgradePrice) {
     //odecteme cenu nakupu
-    numberOfCookies -= 100;
-    //zobrazeni textu
+    numberOfCookies -= autoClickerUpgradePrice;
+    autoClickerUpgradePrice += 200;
+    autoClickerUpgrade.innerText = `Buy Free Delivery of SNUS: ${autoClickerUpgradePrice} kč`
     counter.innerText = "SNUS: " + numberOfCookies;
-    autoclickerCookieIncreaseNumber++;
+    autoclickerCookieIncreaseNumber += 2;
     //zastavime interval
     clearInterval(autoclickerInterval);
     //spustime autoclicker
     autoclickerInterval = setInterval(() => {
       numberOfCookies += autoclickerCookieIncreaseNumber;
-      counter.innerText = "SNUS: " + numberOfCookies;
+      counter.innerHTML = "SNUS: " + numberOfCookies;
     }, 1000);
   }
 }
