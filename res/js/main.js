@@ -19,7 +19,7 @@ clickUpgrade.onclick = () => {
     //odecist cenu nakupu
     numberOfCookies -= clickUpgradePrice;
     clickUpgradePrice *= 2;
-    clickUpgrade.innerHTML = 'Buy click upgrade:'; 
+    clickUpgrade.innerHTML = "Buy click upgrade: {clickUpgradePrice}"; 
     counter.innerText = "SNUS: " + numberOfCookies;
     //zvednout klikani o 1
     cookieIncreaseNumber++;
