@@ -54,15 +54,15 @@ snusUpgrade.onclick = () => {
     if (cookie.getAttribute('src') == "./res/img/SNUSstage1.png") {
       cookie.src = "./res/img/SNUSstage2.png";
       snuscost = 100000;
-      snusUpgrade.innerHTML = `Buy better SNUS: ${snuscost} kč`  ;
+      snusUpgrade.innerText = `Buy better SNUS: ${snuscost} kč`  ;
     } else if (cookie.getAttribute('src') == "./res/img/SNUSstage2.png") {
       cookie.src = "./res/img/SNUSstage3.png";
       snuscost = 500000;
-      snusUpgrade.innerHTML = `Buy better SNUS: ${snuscost} kč`  ;
+      snusUpgrade.innerText = `Buy better SNUS: ${snuscost} kč`  ;
     } else if (cookie.getAttribute('src') == "./res/img/SNUSstage3.png") {
       cookie.src = "./res/img/SNUSstage4.png";
       snuscost = 1000000;
-      snusUpgrade.innerHTML = `Buy better SNUS: ${snuscost} kč` ;
+      snusUpgrade.innerText = `Buy better SNUS: ${snuscost} kč` ;
     } else if (cookie.getAttribute('src') == "./res/img/SNUSstage4.png") {
       cookie.src = "./res/img/SNUSstage5.png";
       snusUpgrade.innerText = "You have all SNUS ";
